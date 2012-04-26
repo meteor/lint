@@ -1,0 +1,16 @@
+<head>
+  <title>lint</title>
+</head>
+
+<body>
+  {{> source}}
+</body>
+
+<template name="source">
+  <div id="left">
+    <pre>{{get_source}}</pre>
+  </div>
+  <div id="right">
+    <code>{{get_parse}}</code>
+  </div>
+</template>

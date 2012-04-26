@@ -11,6 +11,19 @@
     <pre>{{get_source}}</pre>
   </div>
   <div id="right">
-    <code>{{get_parse}}</code>
+    {{#with get_parse}}
+      {{> show_parse}}
+    {{/with}}
+  </div>
+</template>
+
+<template name="show_parse">
+  <div class="ast-box ast-{{this.[0]}}">
+    <div class="head">{{boxhead}}</div>
+    {{#each children}}
+      {{> show_parse}}
+    {{else}}
+      {{stringify rest ..}}
+    {{/each}}
   </div>
 </template>

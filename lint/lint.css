@@ -18,3 +18,17 @@ html, body {
     right: 0;
     width: 50%;
 }
+
+.ast-box {
+    border: 1px solid black;
+    font-family: sans-serif;
+    padding: 4px;
+}
+
+.head {
+    font-weight: bold;
+}
+
+.ast-box .ast-box {
+    margin-top: 4px;
+}
